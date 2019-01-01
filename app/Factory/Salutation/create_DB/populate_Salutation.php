@@ -85,6 +85,7 @@ else {
 
 // Insert tables: FirstNames / FirstNames_Country_Weight
 $_fd_firstnames = fopen (".\\nam_dict_utf8.txt", "r");
+//$_fd_firstnames = fopen (".\\nam_dict_utf8_short.txt", "r");
 if ( $_fd_firstnames) {
 
     while (($_line = fgets($_fd_firstnames)) !== false ) {
@@ -112,53 +113,53 @@ if ( $_fd_firstnames) {
 
             // country weights
             $_pos=30;
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('UK' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('IE' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('US' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('IT' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('MT' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('PT' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('ES' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('FR' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('BE' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('LU' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('NL' => intval(hexdec($_line[$_pos])))); $_pos++; //
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('DE' => intval(hexdec($_line[$_pos])))); $_pos++; // insert Ostfriesland as Germany
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('DE' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('AT' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('CH' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('IS' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('DK' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('NO' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('SE' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('FI' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('EE' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('LV' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('LT' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('PL' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('CZ' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('SK' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('HU' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('RO' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('BG' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('BA' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('HR' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('XK' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('MK' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('ME' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('XS' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('SI' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('AL' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('GR' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('RU' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('BU' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('MD' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('UA' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('AM' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('AZ' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('GE' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('KZ' => intval(hexdec($_line[$_pos])))); $_pos++; // 
-            if ($_line[$_pos] != ' ') array_push ( $_weights, array('TR' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('UK' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('IE' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('US' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('IT' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('MT' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('PT' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('ES' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('FR' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('BE' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('LU' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('NL' => intval(hexdec($_line[$_pos])))); $_pos++; //
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('DE' => intval(hexdec($_line[$_pos])))); $_pos++; // insert Ostfriesland as Germany
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('DE' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('AT' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('CH' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('IS' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('DK' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('NO' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('SE' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('FI' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('EE' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('LV' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('LT' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('PL' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('CZ' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('SK' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('HU' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('RO' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('BG' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('BA' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('HR' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('XK' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('MK' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('ME' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('XS' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('SI' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('AL' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('GR' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('RU' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('BU' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('MD' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('UA' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('AM' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('AZ' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('GE' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('KZ' => intval(hexdec($_line[$_pos])))); $_pos++; // 
+            if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('TR' => intval(hexdec($_line[$_pos])))); $_pos++; // 
             if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('AE' => intval(hexdec($_line[$_pos])))); $_pos++; // 
             if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('IL' => intval(hexdec($_line[$_pos])))); $_pos++; // 
             if (isset($_line[$_pos]) && $_line[$_pos] != ' ') array_push ( $_weights, array('CN' => intval(hexdec($_line[$_pos])))); $_pos++; // 
@@ -219,7 +220,6 @@ if ( $_fd_firstnames) {
 }
 else {
     echo "Cannot load \'nam_dict.txt\' file.". PHP_EOL ;
-    return;
 }
 
 // Insert tables: Firstnames_Russia / Countries / Phonetic_Rules
@@ -239,7 +239,7 @@ if ($_fd_populate_script) {
                     echo '.';
                 }
                 else {
-                    echo PHP_EOL . $_line .PHP_EOL;
+                   // echo PHP_EOL . $_line .PHP_EOL;
                 }
             }
 
@@ -251,6 +251,20 @@ if ($_fd_populate_script) {
 } else {
     echo "Cannot load \'populate_Salutation_DB.sql\' script.". PHP_EOL ;
 } 
+
+// Add russian synonyms to firstname table
+$_sql = $_pdo->prepare("SELECT FR.firstname, F.fn_id, F.shortname, F.typ FROM Firstnames_Russia as FR INNER JOIN Firstnames as F ON FR.fn_id=F.fn_id");
+$_sql->execute ();
+while ( ($_value = $_sql->fetch(PDO::FETCH_ASSOC)) ) {
+    $_weights = array ();
+    $_sql_weight = $_pdo->prepare("SELECT * FROM FirstNames_Country_Weight where fn_id=:fn_id");
+    $_sql_weight->bindParam(':fn_id', $_value["fn_id"], PDO::PARAM_INT );
+    $_sql_weight->execute ();
+    while ( ($_value_weight = $_sql_weight->fetch(PDO::FETCH_ASSOC)) ) {
+        array_push ( $_weights, array($_value_weight["country_indicator"] => $_value_weight["firstname_weight"]) );
+    }
+    addFirstName ( $_pdo, $_value["firstname"], $_value["shortname"], $_value["typ"], $_weights);
+}
 
 echo PHP_EOL;
 echo PHP_EOL;
