@@ -13,6 +13,15 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::namespace('Api')->name('api')->group(function() {
+
+    Route::get('/country/{country_id}', 'CountryController@show')->name('country.show');
+
+
+    Route::get('/firstname/{firstname}', 'FirstnameController@show')->name('firstname.show');
+
+});
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
