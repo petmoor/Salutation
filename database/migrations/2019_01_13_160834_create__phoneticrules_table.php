@@ -16,7 +16,7 @@ class CreatePhoneticrulesTable extends Migration
         Schema::create('phoneticrules', function (Blueprint $table) {
             $table->increments('phr_id');
             $table->string('syllable', 3);
-            $table->string('phonetic', 3);
+            $table->string('phonetic', 4);
             $table->integer('difference');
             $table->integer('hash_group');
             $table->timestamps();
@@ -116,7 +116,7 @@ class CreatePhoneticrulesTable extends Migration
 
     private function insertPhonetics (array $_phonetics) {
         foreach ($_phonetics as $_phonetic) {
-            $_objPhonetic = new \App\PhoneticRule();
+            $_objPhonetic = new \App\Phoneticrule();
             foreach ( $_phonetic as $_fieldname => $_value ) {
                 $_objPhonetic->setAttribute( $_fieldname, $_value);
             }
