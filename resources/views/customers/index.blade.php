@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Customers</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
@@ -20,12 +20,20 @@
                 margin: 0;
             }
 
+            input {
+                padding: 4px;
+            }
+
+            li {
+                list-style-type: none;
+            }
+
             .full-height {
                 height: 100vh;
             }
 
             .flex-center {
-                align-items: center;
+                /*align-items: center;*/
                 display: flex;
                 justify-content: center;
             }
@@ -61,6 +69,19 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .customerinsert {
+                margin-top: 40px;
+            }
+            .customerinsert label {
+                margin: 0px 10px;
+            }
+            .customerinsert button {
+                margin-top: 30px;
+            }
+            .notification li {
+                color: #f80000;
+            }
         </style>
     </head>
     <body>
@@ -81,18 +102,39 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Customers
                 </div>
 
-                <div class="links">
-                    <a href="http://localhost/code/Salutation/public/api/country/">API:Country</a>
-                    <a href="http://localhost/code/Salutation/public/api/firstname/">API:Firstname</a>
-                    <a href="http://localhost/code/Salutation/public/customers/">Show Customers</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div class='customerinsert'>
+                    <form method="post" action="/code/Salutation/public/customers">
+                        {{ csrf_field() }}
+
+                        <div>
+                            <label for="firstname">Vorname:</label><input name="firstname" required placeholder="Vorname eingeben">
+                            <label for="lastname">Nachname:</label><input name="lastname"  placeholder="Nachname eingeben">
+                        </div>
+                        <div><button type="submit">Speichern</button></div>
+                    </form>
+
+                    <div class="notification">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
                 </div>
+
+                <div class='customerlist'>
+
+                    <ul>
+                    @foreach ($customers as $customer)
+                        <li>{{ $customer->firstname }} {{ $customer->lastname }}</li>
+                    @endforeach
+                    </ul>
+
+                </div>
+ 
             </div>
         </div>
     </body>
